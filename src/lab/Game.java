@@ -11,6 +11,8 @@ public class Game {
 	public Frame[] frames = new Frame[NR_OF_FRAMES];
 	public int gameScore = 0;
 	
+	public int extraThrow = 0;
+	
 	Game() {
 		
 	}
@@ -38,6 +40,10 @@ public class Game {
 			}
 			else {
 				prevWasStrike = false;
+				
+				if(this.frames[i].spare){
+					this.gameScore += this.extraThrow;
+				}
 			}
 		}
 	}

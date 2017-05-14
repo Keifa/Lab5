@@ -178,6 +178,7 @@ public class testCase {
 		g.addFrame(4, 5);
 		g.addFrame(8, 1);
 		g.addFrame(2, 8);
+		g.extraThrow = 7;
 		g.calcGameScore();
 		assertEquals(90, g.gameScore);
 	}
