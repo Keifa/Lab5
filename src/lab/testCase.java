@@ -145,6 +145,6 @@ public class testCase {
 		g.addFrame(8, 1);
 		g.addFrame(2, 6);
 		g.calcGameScore();
-		assertEquals(103, g.gameScore);
+		assertEquals(112, g.gameScore);
 	}
 }
