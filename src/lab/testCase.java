@@ -147,4 +147,21 @@ public class testCase {
 		g.calcGameScore();
 		assertEquals(112, g.gameScore);
 	}
+	
+	@Test
+	public void userStory9() {
+		Game g = new Game();
+		g.addFrame(8, 2);
+		g.addFrame(5, 5);
+		g.addFrame(7, 2);
+		g.addFrame(3, 6);
+		g.addFrame(4, 4);
+		g.addFrame(5, 3);
+		g.addFrame(3, 3);
+		g.addFrame(4, 5);
+		g.addFrame(8, 1);
+		g.addFrame(2, 6);
+		g.calcGameScore();
+		assertEquals(98, g.gameScore);
+	}
 }
