@@ -11,4 +11,8 @@ public class Frame {
 		this.secondThrow = secondThrow;
 		this.score = this.firstThrow + this.secondThrow;
 	}
+	
+	public void print() {
+		System.out.println("[" + this.firstThrow + "," + this.secondThrow + "]");
+	}
 }
