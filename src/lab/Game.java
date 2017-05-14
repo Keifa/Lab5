@@ -23,12 +23,21 @@ public class Game {
 	}
 	
 	public void calcGameScore() {
-		for(int i = 0; i < this.NR_OF_FRAMES; i++) {
+		boolean prevWasStrike = false;
+		for(int i = 0; i < this.NR_OF_FRAMES; i++) {		
 			if(this.frames[i].strike && i < this.NR_OF_FRAMES - 1) {
+				if(prevWasStrike) {
+					this.gameScore += this.frames[i + 1].firstThrow;
+				}
 				this.gameScore += this.frames[i + 1].score;
+				prevWasStrike = true;
 			}
 			else if(this.frames[i].spare && i < this.NR_OF_FRAMES - 1) {
 				this.gameScore += this.frames[i + 1].firstThrow;
+				prevWasStrike = false;
+			}
+			else {
+				prevWasStrike = false;
 			}
 		}
 	}
