@@ -2,8 +2,9 @@ package lab;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+import lab.Frame;
 
-public class UserStories {
+public class testCase {
 
 	@Test
 	public void userStory1() {
