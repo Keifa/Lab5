@@ -3,6 +3,7 @@ package lab;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import lab.Frame;
+import lab.Game;
 
 public class testCase {
 
@@ -17,5 +18,49 @@ public class testCase {
 	public void userStory2() {
 		Frame f = new Frame(2, 6);
 		assertEquals(8, f.score);
+	}
+	
+	@Test
+	public void userStory3() {
+		Game g = new Game();
+		g.addFrame(1, 5);
+		assertEquals(1, g.frames[0].firstThrow);
+		assertEquals(5, g.frames[0].secondThrow);
+		
+		g.addFrame(3, 6);
+		assertEquals(3, g.frames[1].firstThrow);
+		assertEquals(6, g.frames[1].secondThrow);
+		
+		g.addFrame(7, 2);
+		assertEquals(7, g.frames[2].firstThrow);
+		assertEquals(2, g.frames[2].secondThrow);
+		
+		g.addFrame(3, 6);
+		assertEquals(3, g.frames[3].firstThrow);
+		assertEquals(6, g.frames[3].secondThrow);
+		
+		g.addFrame(4, 4);
+		assertEquals(4, g.frames[4].firstThrow);
+		assertEquals(4, g.frames[4].secondThrow);
+		
+		g.addFrame(5, 3);
+		assertEquals(5, g.frames[5].firstThrow);
+		assertEquals(3, g.frames[5].secondThrow);
+		
+		g.addFrame(3, 3);
+		assertEquals(3, g.frames[6].firstThrow);
+		assertEquals(3, g.frames[6].secondThrow);
+		
+		g.addFrame(4, 5);
+		assertEquals(4, g.frames[7].firstThrow);
+		assertEquals(5, g.frames[7].secondThrow);
+		
+		g.addFrame(8, 1);
+		assertEquals(8, g.frames[8].firstThrow);
+		assertEquals(1, g.frames[8].secondThrow);
+		
+		g.addFrame(2, 6);
+		assertEquals(2, g.frames[9].firstThrow);
+		assertEquals(6, g.frames[9].secondThrow);
 	}
 }
