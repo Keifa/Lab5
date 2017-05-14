@@ -12,5 +12,10 @@ public class testCase {
 		assertEquals(2, f.firstThrow);
 		assertEquals(4, f.secondThrow);
 	}
-
+	
+	@Test
+	public void userStory2() {
+		Frame f = new Frame(2, 6);
+		assertEquals(8, f.score);
+	}
 }
