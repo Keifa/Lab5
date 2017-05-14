@@ -219,4 +219,23 @@ public class testCase {
 		g.calcGameScore();
 		assertEquals(93, g.gameScore);
 	}
+	
+	@Test
+	public void userStory13() {
+		Game g = new Game();
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.addFrame(10, 0);
+		g.extraThrow = 10;
+		g.extraThrow2 = 10;
+		g.calcGameScore();
+		assertEquals(300, g.gameScore);
+	}
 }
