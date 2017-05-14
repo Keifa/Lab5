@@ -63,4 +63,20 @@ public class testCase {
 		assertEquals(2, g.frames[9].firstThrow);
 		assertEquals(6, g.frames[9].secondThrow);
 	}
+	
+	@Test
+	public void userStory4() {
+		Game g = new Game();
+		g.addFrame(1, 5);
+		g.addFrame(3, 6);
+		g.addFrame(7, 2);
+		g.addFrame(3, 6);
+		g.addFrame(4, 4);
+		g.addFrame(5, 3);
+		g.addFrame(3, 3);
+		g.addFrame(4, 5);
+		g.addFrame(8, 1);
+		g.addFrame(2, 6);
+		assertEqual(81, g.gameScore);
+	}
 }
