@@ -40,14 +40,20 @@ public class Game {
 				prevWasStrike = false;
 			}
 			else {
-				prevWasStrike = false;
-				
-				if(this.frames[i].spare){
+				if(this.frames[i].spare) {
+					if(prevWasStrike) {
+						this.gameScore += this.frames[i].firstThrow;
+					}
 					this.gameScore += this.extraThrow;
 				}
 				else if(this.frames[i].strike) {
+					if(prevWasStrike) {
+						this.gameScore += this.frames[i].score;
+					}
 					this.gameScore += this.extraThrow + this.extraThrow2;
 				}
+				
+				prevWasStrike = false;
 			}
 		}
 	}
