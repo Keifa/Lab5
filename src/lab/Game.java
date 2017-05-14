@@ -12,6 +12,7 @@ public class Game {
 	public int gameScore = 0;
 	
 	public int extraThrow = 0;
+	public int extraThrow2 = 0;
 	
 	Game() {
 		
@@ -43,6 +44,9 @@ public class Game {
 				
 				if(this.frames[i].spare){
 					this.gameScore += this.extraThrow;
+				}
+				else if(this.frames[i].strike) {
+					this.gameScore += this.extraThrow + this.extraThrow2;
 				}
 			}
 		}
