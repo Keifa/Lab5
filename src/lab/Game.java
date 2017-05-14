@@ -17,8 +17,16 @@ public class Game {
 	
 	public void addFrame(int firstThrow, int secondThrow) {
 		if(this.currentFrame < this.NR_OF_FRAMES) {
-			this.frames[this.currentFrame++] = new Frame(firstThrow, secondThrow);
-			this.gameScore += this.frames[this.currentFrame - 1].score;
+			this.frames[this.currentFrame] = new Frame(firstThrow, secondThrow);
+			this.gameScore += this.frames[this.currentFrame++].score;
+		}
+	}
+	
+	public void calcGameScore() {
+		for(int i = 0; i < this.NR_OF_FRAMES; i++) {
+			if(this.frames[i].strike && i < this.NR_OF_FRAMES - 1) {
+				this.gameScore += this.frames[i + 1].score;
+			}
 		}
 	}
 	
