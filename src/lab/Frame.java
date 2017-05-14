@@ -6,6 +6,7 @@ public class Frame {
 	public int secondThrow = 0;
 	public int score = 0;
 	public boolean strike = false;
+	public boolean spare = false;
 	
 	Frame(int firstThrow, int secondThrow) {
 		this.firstThrow = firstThrow;
@@ -14,6 +15,9 @@ public class Frame {
 		
 		if(this.firstThrow == 10 || this.secondThrow == 10) {
 			this.strike = true;
+		}
+		else if(this.score == 10) {
+			this.spare = true;
 		}
 	}
 	

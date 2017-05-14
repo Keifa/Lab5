@@ -27,6 +27,9 @@ public class Game {
 			if(this.frames[i].strike && i < this.NR_OF_FRAMES - 1) {
 				this.gameScore += this.frames[i + 1].score;
 			}
+			else if(this.frames[i].spare && i < this.NR_OF_FRAMES - 1) {
+				this.gameScore += this.frames[i + 1].firstThrow;
+			}
 		}
 	}
 	
